@@ -1,0 +1,91 @@
+<!-- HTML Start -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- my style link -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Book Archive</title>
+</head>
+
+<body class="body-color">
+    <!-- Header Section Start -->
+    <header class="container">
+        <h1 class="container text-dark text-center my-4">
+            Find Books with One Search
+        </h1>
+        <div class="input-group mb-3 w-75 mx-auto">
+            <input id="search-field" type="text" class="form-control border border-info border-3" placeholder="Search the book you want" aria-label="Search the book you want" aria-describedby="button-addon2" />
+            <button onclick="loadBooks()" class="
+            btn btn-outline-info
+            bg-info
+            text-dark
+            border-info border border-3
+          " type="button" id="search-button">
+          Search
+        </button>
+        </div>
+        <!-- Invalid book Name -->
+        <h1 id="error-message" class="
+          bg-warning
+          text-center text-dark
+          rounded-2
+          px-2
+          py-4
+          w-50
+          mx-auto
+        ">
+            Please Provide a valid book name!
+        </h1>
+        <div id="spinner">
+            <div class="d-flex justify-content-center text-info my-4">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <!-- Total books Found -->
+        <h1 id="totalBooksFound" class="
+          bg-danger
+          text-white
+          rounded-2
+          px-3
+          py-4
+          w-50
+          mx-auto
+          my-4
+          text-center
+          border border-info
+        ">
+            Total Books Found : <span id="booksFound" class="text-info"></span>
+        </h1>
+        <!-- No Books Found -->
+        <h1 id="noBooksFound" class="bg-info text-center text-dark rounded-2 px-2 py-4 w-50 mx-auto">
+            Oops!! No Books Found :( <span id="booksFound"></span>
+        </h1>
+    </header>
+    <!-- main section Start -->
+    <main class="container">
+        <section>
+            <div id="book-card-container" class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Book Cards goes here -->
+            </div>
+        </section>
+    </main>
+
+
+    <!-- javascript Link Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- My javascript link -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
+
+<!-- HTML End -->
